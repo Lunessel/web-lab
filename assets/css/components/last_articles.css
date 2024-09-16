@@ -10,9 +10,13 @@
     .articles {
         display: flex;
         justify-content: space-evenly;
+        transform: translateY(20svh);
+        opacity: 0;
+
 
         .article {
             --border-r: 6%;
+            
             
             display: flex;
             flex-direction: column;
@@ -27,7 +31,7 @@
             & > :not(img) {
                 margin-left: 10%;
                 width: 80%;
-              }
+            }
 
             & > img {
                 border-top-left-radius: var(--border-r);
@@ -43,10 +47,11 @@
             a {
                 text-align: center;
                 margin: 0;
-                margin-left: 3%;
-                width: 40%;
+                margin-left: 3%; 
+                width: 60%;
                 padding: 10px;
-                border: none;
+                justify-self: flex-end;
+                /* border: none;  */
             }
             
             @media (hover: hover) {
@@ -91,10 +96,10 @@
             align-items: center;
 
             .article {
-                width: 70%;
+                width: 90%;
 
-                button {
-                    width: 70%;
+                a {
+                    width: 50%;
                 }
             }
 

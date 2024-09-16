@@ -32,6 +32,7 @@
 
         h2 {
             letter-spacing: 2px;
+            transform: translateX(calc(-1 * 50svw));
         }
 
         h3 {
@@ -43,12 +44,14 @@
     }
 
     .img-container {
+        opacity: 0;
         position: relative;
-        width: 42%;
+        width: 50%;
         aspect-ratio: 1.53;
         background-image: url(../../img/intro.webp);
         background-size: contain;
-
+        transform: translateX(50svw);
+        
         img {
             position: absolute;
             right: -20%;

@@ -33,6 +33,7 @@ body {
 }
 
 .blue-btn {
+    display: block;
     width: fit-content;
     padding: clamp(0.625rem, 0.446rem + 0.893vw, 1.25rem) clamp(1.25rem, 0.893rem + 1.786vw, 2.5rem);
     background: none;
@@ -66,29 +67,35 @@ body {
             }
         }
     }
+    @media (hover: none) {
+        .blue-btn {
+            background: var(--blue);
+            color: var(--white);
+        }
+    }
 
 }
 
 .h2 {
-    font-size: clamp(1rem, 0.571rem + 2.143vw, 4rem); /*36px*/
+    font-size: clamp(1.4rem, 0.571rem + 2.143vw, 4rem); /*36px*/
     font-weight: 700;
 }
 
 .h3 {
-    font-size: clamp(1rem, 0.257rem + 1.214vw, 2.2rem); /*21px*/
+    font-size: clamp(1.2rem, 0.257rem + 1.214vw, 2.2rem); /*21px*/
 }
 
 .h4 {
-    font-size: clamp(0.8rem, 0.171rem + 1.143vw, 2rem);  /*18px*/
+    font-size: clamp(1rem, 0.171rem + 1.143vw, 2rem);  /*18px*/
 }
 
 .h6 {
-    font-size: clamp(0.6rem, 0.343rem + 0.786vw, 1.6rem); /*14px*/
+    font-size: clamp(0.8rem, 0.458rem + 0.714vw, 1.6rem); /*14px*/
     line-height: 180%;
 }
 
 .h7 {
-    font-size: clamp(0.5rem, 0.371rem + 0.643vw, 1.4rem); /*12px*/
+    font-size: clamp(0.8rem, 0.171rem + 1.143vw, 2rem);  /*18px*/
 }
 
 /* br tablet */
