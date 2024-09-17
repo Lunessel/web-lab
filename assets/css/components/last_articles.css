@@ -10,13 +10,11 @@
     .articles {
         display: flex;
         justify-content: space-evenly;
-        transform: translateY(20svh);
-        opacity: 0;
-
-
+    
         .article {
             --border-r: 6%;
-            
+            transform: translateY(20svh);
+            opacity: 0;
             
             display: flex;
             flex-direction: column;
@@ -51,7 +49,6 @@
                 width: 60%;
                 padding: 10px;
                 justify-self: flex-end;
-                /* border: none;  */
             }
             
             @media (hover: hover) {

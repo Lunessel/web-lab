@@ -53,6 +53,10 @@ body {
         padding: 10px 40px;
     }
 
+    &.pure {
+        border: none;
+    }
+
     img {
         transition: all var(--base-tr);
     }
