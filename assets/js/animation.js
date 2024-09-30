@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 let mm = gsap.matchMedia();
 
-gsap.to(".first-screen h2", {opacity: 1, x: 0, duration: .6 });
+gsap.to(".first-screen .h2", {opacity: 1, x: 0, duration: .6 });
 
 // desktop anim
 mm.add('(min-width: 878px)', () => {
