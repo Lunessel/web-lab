@@ -79,6 +79,7 @@
         h2 {
             color: var(--white);
             margin-bottom: clamp(1rem, 0.821rem + 0.893vw, 1.625rem);
+            text-align: center;
         }
 
         
