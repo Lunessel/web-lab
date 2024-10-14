@@ -19,7 +19,7 @@ const PopUpModalWindow: FC<PopUpModalWindowProps> = (
                     <div className='popup-head'>
                         <div>
                             <h3>{headText}</h3>
-                        </div>
+                        </div>children:React.ReactNode
                         <img src={close} alt={'close'} onClick={() => setActive(false)}/>
                     </div>
                     {children}

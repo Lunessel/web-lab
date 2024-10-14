@@ -47,7 +47,6 @@ const FirstScreen: FC = () => {
             <div className="img-container">
                 <img src={dots} alt='dots'/>
             </div>
-
         </section>
     );
 };

@@ -1,22 +1,46 @@
 import React, {FC, useRef} from 'react';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {IArticle} from "../../../intefaces/commonInterfaces";
+import Article from "../../entities/Article/Article";
 
 import article1 from '../../../images/article1.webp';
 import article2 from '../../../images/article2.webp';
 import article3 from '../../../images/article3.webp';
 
-import arrow from '../../../images/arrow.svg';
 import bubble from '../../../images/bubble.svg';
 import dots from '../../../images/dots.svg';
 
 import './LastArticles.scss';
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
+const articles: IArticle[] = [
+    {
+        id: 1,
+        title: 'Disease detection, check up in the laboratory',
+        description: 'In this case, the role of the health laboratory is very important to do a disease detection...',
+        picture: article1
+    },
+    {
+        id: 2,
+        title: 'Herbal medicines that are safe for consumption',
+        description: 'Herbal medicine is very widely used at this time because of its very good for your health...',
+        picture: article2
+    },
+    {
+        id: 3,
+        title: 'Natural care for healthy facial skin',
+        description: 'A healthy lifestyle should start from now and also for your skin health. There are some...',
+        picture: article3
+    }
+]
 
 const LastArticles: FC = () => {
     const ctxRef = useRef<gsap.Context>(gsap.context());
     const main = useRef<HTMLDivElement>(document.createElement('div'));
+
+    console.log(typeof article1)
 
     React.useEffect(() => {
         ctxRef.current = gsap.context(() => {
@@ -58,27 +82,9 @@ const LastArticles: FC = () => {
             <h2 className="h2">Check out our latest article</h2>
             <div className="line"></div>
             <div className="articles">
-                <div className="article">
-                    <img src={article1} alt="article 1"/>
-                    <h3 className="h3">Disease detection, check up in the laboratory</h3>
-                    <h4 className="h4">In this case, the role of the health laboratory is very important to do a disease
-                        detection...</h4>
-                    <a href='/' className="blue-btn h6">View all<img src={arrow} alt="→"/></a>
-                </div>
-                <div className="article">
-                    <img src={article2} alt="article 1"/>
-                    <h3 className="h3">Herbal medicines that are safe for consumption</h3>
-                    <h4 className="h4">Herbal medicine is very widely used at this time because of its very good for
-                        your health...</h4>
-                    <a href='/' className="blue-btn h6">View all<img src={arrow} alt="→"/></a>
-                </div>
-                <div className="article">
-                    <img src={article3} alt="article 1"/>
-                    <h3 className="h3">Natural care for healthy facial skin</h3>
-                    <h4 className="h4">A healthy lifestyle should start from now and also for your skin health. There
-                        are some...</h4>
-                    <a href='/' className="blue-btn h6">View all<img src={arrow} alt="→"/></a>
-                </div>
+                {articles.map(article => (
+                    <Article key={article.id} {...article}/>
+                ))}
             </div>
             <a href='/' className="blue-btn small h6">Show more</a>
             <img className="bubble" src={bubble} alt="bubble"/>

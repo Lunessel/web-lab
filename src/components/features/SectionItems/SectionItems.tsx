@@ -1,7 +1,7 @@
 import React, {Dispatch, FC, FormEvent, useEffect, useState} from 'react';
 import './SectionItems.scss';
-import {defaultDoctor, IDoctor} from "../../../intefaces/doctor";
-import DoctorItem from "../../common/DoctorItem/DoctorItem";
+import {defaultDoctor, IDoctor} from "../../../intefaces/doctorInterfaces";
+import DoctorItem from "../../entities/DoctorItem/DoctorItem";
 import PopUpModalWindow from "../../common/PopUpModalWindow/PopUpModalWindow";
 
 interface SectionItemsProps {

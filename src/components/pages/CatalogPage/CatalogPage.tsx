@@ -2,7 +2,7 @@ import React, {FC, useState} from 'react';
 import SectionMenu from "../../features/SectionMenu/SectionMenu";
 import SectionItems from "../../features/SectionItems/SectionItems";
 import doctorsData from '../../../data.json';
-import {IDoctor} from "../../../intefaces/doctor";
+import {IDoctor} from "../../../intefaces/doctorInterfaces";
 
 const flattenedDoctorsData: IDoctor[] = doctorsData.flat();
 

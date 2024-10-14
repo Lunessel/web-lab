@@ -1,9 +1,9 @@
 import React, {Dispatch, FC, FormEvent, useState} from 'react';
 
-import searchIcon from '../../../images/search_button.svg';
-import deleteIcon from '../../../images/clear_button.svg';
+// import searchIcon from '../../../images/search_button.svg';
+// import deleteIcon from '../../../images/clear_button.svg';
 import './SectionMenu.scss';
-import {defaultDoctor, IDoctor} from "../../../intefaces/doctor";
+import {defaultDoctor, IDoctor} from "../../../intefaces/doctorInterfaces";
 import PopUpModalWindow from "../../common/PopUpModalWindow/PopUpModalWindow";
 
 interface SectionMenuProps {

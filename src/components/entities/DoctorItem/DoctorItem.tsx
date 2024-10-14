@@ -1,6 +1,6 @@
 import React, {Dispatch, FC} from 'react';
 import './DoctorItem.scss';
-import {IDoctor} from "../../../intefaces/doctor";
+import {IDoctor} from "../../../intefaces/doctorInterfaces";
 
 interface DoctorItemProps {
     doctor: IDoctor;

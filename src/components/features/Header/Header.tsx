@@ -2,18 +2,20 @@ import React, {FC, useRef} from 'react';
 import gsap from "gsap";
 import logo from '../../../images/logo.svg';
 import './Header.scss';
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 const Header: FC = () => {
+    const location = useLocation();
 
     return (
         <header >
             <nav className="desktop-nav">
-                <Link to="/" className="active h6">Home</Link>
-                <Link to="/catalog" className="h6">Find a doctor</Link>
-                <a href="/" className="h6">Apps</a>
-                <a href="/" className="h6">Testimonials</a>
-                <a href="/" className="h6">About us</a>
+                <Link to="/" className={`h6 ${location.pathname === '/' ? 'active' : ''}`}>Home</Link>
+                <Link to="/catalog" className={`h6 ${location.pathname === '/catalog' ? 'active' : ''}`}>Find a
+                    doctor</Link>
+                <a href="/" className={`h6 ${location.pathname === '/apps' ? 'active' : ''}`}>Apps</a>
+                <a href="/" className={`h6 ${location.pathname === '/testimonials' ? 'active' : ''}`}>Testimonials</a>
+                <a href="/" className={`h6 ${location.pathname === '/about' ? 'active' : ''}`}>About us</a>
             </nav>
             <nav role="navigation">
                 <div id="menuToggle">
