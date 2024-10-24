@@ -1,7 +1,6 @@
 ## Лабораторні роботи з дисципліни "Вебтехнології та вебдизайн"
 
 ## Виконав: Дячок Микола Михайлович(ІР-21)
-## Лабораторна робота №9 (Варіант 5)
+## Лабораторна робота №8 (Варіант 5)
 
-backend: add get_doctor_by_id and get_countries endpoints
-frontend: add fetching data via axios
+добавив функціонал кнопки show more, item page, filters
