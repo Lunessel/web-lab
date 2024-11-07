@@ -54,7 +54,6 @@
 
   }
 
-
   .navigation {
     display: flex;
     align-items: center;
@@ -64,6 +63,25 @@
     .h4 {
       font-weight: 400;
     }
+  }
+  label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 
+  select, input {
+    appearance: none;
+    font-size: 1rem;
+    padding: 0.675em 1em;
+    background-color: #fff;
+    border: 1px solid #caced1;
+    border-radius: 0.25rem;
+    color: #000;
+    cursor: pointer;
+  }
+
+  input {
+    padding: 5px;
   }
 }

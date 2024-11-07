@@ -18,5 +18,7 @@ export const defaultSearchOptions: ISearchOptions = {
 
 export interface ICart {
     id: number,
-    doctor: IDoctor
+    doctor: IDoctor,
+    doctor_type: string,
+    quantity: number
 }

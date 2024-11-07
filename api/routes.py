@@ -183,9 +183,9 @@ def get_max_cart_item_id() -> int:
     return max(ids) + 1
 
 
-def check_collision(doctor: Doctor) -> bool:
+def check_collision(doctor: Doctor, quantity, doctor_type) -> bool:
     for cart_item in cart:
-        if doctor == cart_item.doctor:
+        if doctor == cart_item.doctor and doctor_type == cart_item.doctor_type:
             return True
     return False
 
@@ -205,7 +205,11 @@ async def add_cart(
 ) -> CartItem:
     doctor = await get_doctor(doctor_id, db_session)
     cart_item = CartItem(id=get_max_cart_item_id(), doctor=Doctor.model_validate(doctor), doctor_type=doctor_type, quantity=quantity)
-    if not check_collision(doctor):
+    for cart_item in cart:
+        if cart_item.doctor == doctor and cart_item.doctor_type == doctor_type:
+            cart_item.quantity += quantity
+            break
+    else:
         cart.append(cart_item)
     return cart_item
 
